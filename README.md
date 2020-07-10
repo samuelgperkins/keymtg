@@ -11,6 +11,8 @@
 ### Card Pools
 - 45 randomly selected cards
 - Vintage legal
+- Not on the reserved list
+- Not named "Plains," "Island," "Swamp," "Mountain," or "Forest"
 - At least one legendary creature
 - Reprints are treated as separate cards
 - Pools for future years can include new vintage legal cards
