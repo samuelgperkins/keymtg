@@ -25,3 +25,15 @@
 
 ### Code
 - React & Node - built for browsers
+
+## Building
+
+Tools you need: `node` and `npm`
+
+To create a dev build and start the test server:
+
+`npm run start`
+
+To create a production build:
+
+`npm run build`
