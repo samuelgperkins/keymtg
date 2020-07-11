@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { cardCount } from './CardDatabase';
+import { cardCount} from './CardDatabase';
 import { magicCardFromIndex } from './MagicCard';
 
 const CARD_POOL_DEAFULT_SIZE = 45;
@@ -10,6 +10,10 @@ export class CardPool extends Component {
         super(props);
 
         this.user_bday = props.user_bday;
+
+        //2020-07-11: use seedrandom to create seed based on the user's inputted birthday
+        var seedrandom = require('seedrandom');
+        seedrandom(this.user_bday, { global: true });
 
         if (props.year === undefined) {
             this.year = new Date().getFullYear();
@@ -36,7 +40,9 @@ export class CardPool extends Component {
         console.log(`Loading in ${cards.length} cards from a database of ${cardCount()} cards`);
         cards.forEach((_, index, self) => {
             console.log(`Loading card ${index}`);
-            self[index] = magicCardFromIndex(index % cardCount(), index);
+            //2020-07-11: use Math.random() influenced by seedrandom and bdate to grab random cards
+            // from the database
+            self[index] = magicCardFromIndex(Math.floor(Math.random() * cardCount()), index);
         });
 
         this.setState({

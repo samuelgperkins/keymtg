@@ -23,3 +23,4 @@ export function getCardInfo(index) {
 export function cardCount() {
     return database.cards.length;
 }
+
