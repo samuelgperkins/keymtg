@@ -7,7 +7,7 @@ class App extends Component {
         super(props);
 
         this.state = {
-            cardPool: <div></div>,
+            seed: null
         };
 
         this.generateCardPool = this.generateCardPool.bind(this);
@@ -17,7 +17,7 @@ class App extends Component {
         let bday = document.getElementById('bday_field').value;
         console.log(`New card pool for ${bday}`);
         this.setState({
-            cardPool: <CardPool user_bday={bday} />
+            seed: bday
         });
     }
 
@@ -30,7 +30,10 @@ class App extends Component {
             <button onClick={this.generateCardPool} type="submit">
                 Generate
             </button>
-            {this.state.cardPool}
+            {this.state.seed === null ?
+                <div></div> :
+                <CardPool user_bday={this.state.seed} size={200} />
+            }
         </div>
         );
     }

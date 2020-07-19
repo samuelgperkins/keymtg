@@ -9,13 +9,16 @@ export class MagicCard extends Component {
 
         this.name = props.name;
         this.set = props.set;
+        this.date = props.date;
+        this.image = props.image;
         this.url = `https://scryfall.com/search?q=${this.name} s:${this.set}`;
     }
 
     render () {
         return (
         <div>
-            {this.name} | {this.set} - (<a href={this.url}>link</a>)
+            {this.name} | {this.set} - (<a href={this.url}>link</a>) <br />
+            <img src={this.image} alt={this.name} height="200" />
         </div>
         );
     }
@@ -24,6 +27,8 @@ export class MagicCard extends Component {
 MagicCard.propTypes = {
     name: PropTypes.string.isRequired,
     set: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
 }
 
 /* return a new MagicCard component given an index in our database */
@@ -34,5 +39,11 @@ export function magicCardFromIndex (index, key = 0) {
         return null;
     }
 
-    return <MagicCard name={cardInfo.name} set={cardInfo.set} key={key} />;
+    return <MagicCard
+        name={cardInfo.name}
+        set={cardInfo.set}
+        date={cardInfo.date}
+        image={cardInfo.image}
+        key={key}
+    />;
 }
