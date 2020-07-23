@@ -15,9 +15,11 @@ class App extends Component {
 
     generateCardPool () {
         let bday = document.getElementById('bday_field').value;
+        let inputSize = parseInt(document.getElementById('size_field').value);
         console.log(`New card pool for ${bday}`);
         this.setState({
-            seed: bday
+            seed: bday,
+            size: inputSize
         });
     }
 
@@ -27,12 +29,16 @@ class App extends Component {
             <h1>Birthday MTG</h1>
             <label htmlFor="bday_field">Birthday: </label>
             <input type="text" id="bday_field" />
+            <br></br> 
+            <label htmlFor="size_field">Pool Size: </label>
+            <input type="text" id="size_field" />
+            <br></br>
             <button onClick={this.generateCardPool} type="submit">
                 Generate
             </button>
             {this.state.seed === null ?
                 <div></div> :
-                <CardPool user_bday={this.state.seed} size={200} />
+                <CardPool user_bday={this.state.seed} size={this.state.size} />
             }
         </div>
         );

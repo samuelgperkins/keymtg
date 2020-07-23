@@ -37,6 +37,7 @@ export function getRandomCards(count, seed, year=EPOCH_YEAR) {
     let cards = new Array(count).fill(undefined);
     cards.forEach((_, index, self) => {
         // rng() does not affect global Math.Random() rng
+        // observation: rng seems to result in mannny of the same cards. Could be a nonexistant pattern *shrug*
         self[index] = magicCardFromIndex(Math.floor(rng() * max), index);
     });
 
