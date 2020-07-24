@@ -29,7 +29,7 @@ export function getCardInfo(index) {
     return { name: cardName, set: cardSet, date: cardDate, image: cardURL };
 }
 
-export function getRandomCards(count, seed, year=EPOCH_YEAR) {
+export function getRandomCards(count, seed, year) {
     let seedrandom = require('seedrandom');
     let rng = seedrandom(seed);
     let max = cardCount(year);
@@ -44,11 +44,21 @@ export function getRandomCards(count, seed, year=EPOCH_YEAR) {
     return cards;
 }
 
-export function cardCount(year=EPOCH_YEAR) {
+export function cardCount(year) {
     if (year > EPOCH_YEAR) {
         // do something
     }
+    let releaseDate;
+    let maxDate = new Date(year);
+    let cardsToSubtract = database.cards.length -1;
+    while(cardsToSubtract > 0){
+        releaseDate = new Date(database.cards[cardsToSubtract][2]);
+        if(releaseDate > maxDate)
+            cardsToSubtract--;
+        else
+            break;
+    }
 
-    return database.cards.length;
+    return cardsToSubtract + 1;
 }
 

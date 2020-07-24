@@ -15,11 +15,13 @@ class App extends Component {
 
     generateCardPool () {
         let bday = document.getElementById('bday_field').value;
-        let inputSize = parseInt(document.getElementById('size_field').value);
+        let inputSize = document.getElementById('size_field').value;
+        let inputYear = document.getElementById('year_field').value;
         console.log(`New card pool for ${bday}`);
         this.setState({
             seed: bday,
-            size: inputSize
+            size: inputSize,
+            year: inputYear
         });
     }
 
@@ -33,12 +35,15 @@ class App extends Component {
             <label htmlFor="size_field">Pool Size: </label>
             <input type="text" id="size_field" />
             <br></br>
+            <label htmlFor="year_field">Release Date: </label>
+            <input type="text" id="year_field" />
+            <br></br>
             <button onClick={this.generateCardPool} type="submit">
                 Generate
             </button>
             {this.state.seed === null ?
                 <div></div> :
-                <CardPool user_bday={this.state.seed} size={this.state.size} />
+                <CardPool user_bday={this.state.seed} size={this.state.size} year={this.state.year} />
             }
         </div>
         );
