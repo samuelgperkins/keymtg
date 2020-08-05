@@ -4,7 +4,7 @@ import json
 def main():
     cnt = 0
     fi = open('default-cards.json', 'r', encoding='utf-8')
-    fo = open('birthday.json', 'w')
+    fo = open('birthday-legendary.json', 'w')
 
     fi.readline()
     fo.write('{\n"cards": [\n')
@@ -53,6 +53,10 @@ def main():
         if ((line_json.get('legalities').get('vintage') == 'not_legal' or \
                 line_json.get('legalities').get('vintage') == 'banned') \
                 and name != 'Lurrus of the Dream-Den'):
+            continue
+
+        #legendary creatures only
+        if("Legendary Creature" not in line_json.get('type_line')):
             continue
 
         # no promos
