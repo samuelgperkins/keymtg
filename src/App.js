@@ -27,22 +27,28 @@ class App extends Component {
 
     render () {
         return (
-        <div>
-            <h1>Birthday MTG</h1>
-            <label htmlFor="bday_field">Birthday: </label>
+        <div style = {{color: "black"}}>
+            <h1>KEY MTG</h1>
+            <label htmlFor="bday_field">Key String: </label>
             <input type="text" id="bday_field" />
+            <br></br>
+            <i>Enter a string to generate a unique pool of cards. Suggestions: An ID#, a birthdate, a KeyForge Archon, a charity donation receipt #</i>
             <br></br> 
             <label htmlFor="size_field">Pool Size: </label>
             <input type="text" id="size_field" />
-            <i>Defaults to 45 cards</i>
+            <br></br>
+            <i>Defaults to 45 cards. Suggestion: try building a deck from combining multiple pools</i>
             <br></br>
             <label htmlFor="year_field">Release Date: </label>
             <input type="text" id="year_field" />
+            <br></br>
             <i>yyy/mm/dd  Currently defaults and supports up to 2020/07/23</i>
             <br></br>
             <button onClick={this.generateCardPool} type="submit">
                 Generate
             </button>
+            <br></br>
+            <i>Currently need to refresh between Generates. Work in progress</i>
             {this.state.seed === null ?
                 <div></div> :
                 <CardPool user_bday={this.state.seed} size={this.state.size} year={this.state.year} />
