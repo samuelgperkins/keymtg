@@ -34,9 +34,11 @@ class App extends Component {
             <br></br> 
             <label htmlFor="size_field">Pool Size: </label>
             <input type="text" id="size_field" />
+            <i>Defaults to 45 cards</i>
             <br></br>
             <label htmlFor="year_field">Release Date: </label>
             <input type="text" id="year_field" />
+            <i>yyy/mm/dd  Currently defaults and supports up to 2020/07/23</i>
             <br></br>
             <button onClick={this.generateCardPool} type="submit">
                 Generate

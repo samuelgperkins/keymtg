@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { getCardInfo } from './CardDatabase';
+import { getCardInfo ,getCardInfoLegendary } from './CardDatabase';
 
 /* a simple component containing the card info and a URL for searching it up */
 export class MagicCard extends Component {
@@ -34,6 +34,22 @@ MagicCard.propTypes = {
 /* return a new MagicCard component given an index in our database */
 export function magicCardFromIndex (index, key = 0) {
     let cardInfo = getCardInfo(index);
+
+    if (cardInfo === null) {
+        return null;
+    }
+
+    return <MagicCard
+        name={cardInfo.name}
+        set={cardInfo.set}
+        date={cardInfo.date}
+        image={cardInfo.image}
+        key={key}
+    />;
+}
+
+export function magicCardFromIndexLegendary (index, key = 0) {
+    let cardInfo = getCardInfoLegendary(index);
 
     if (cardInfo === null) {
         return null;

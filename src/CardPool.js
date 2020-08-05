@@ -14,7 +14,7 @@ export class CardPool extends Component {
             //this.year = new Date().getFullYear();
             this.year = '2020-07-23'
             //toying with a solution that can take full dates. Grandfathering in
-            //today's date
+            //today's date. Will likely become a const that takes over EPOCH_YEAR
         } else {
             this.year = props.year;
         }
@@ -25,7 +25,7 @@ export class CardPool extends Component {
             this.size = props.size;
         }
 
-        //just make it a damn int here
+        //just make it a damn int here lol
         this.size = parseInt(this.size);
 
         this.cards = getRandomCards(this.size, this.user_bday, this.year);
