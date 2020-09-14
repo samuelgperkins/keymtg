@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/keymtg/static/css/main.546f271c.chunk.css",
-    "main.js": "/keymtg/static/js/main.33490c4c.chunk.js",
-    "main.js.map": "/keymtg/static/js/main.33490c4c.chunk.js.map",
-    "runtime-main.js": "/keymtg/static/js/runtime-main.c615591f.js",
-    "runtime-main.js.map": "/keymtg/static/js/runtime-main.c615591f.js.map",
-    "static/js/2.f48c97e1.chunk.js": "/keymtg/static/js/2.f48c97e1.chunk.js",
-    "static/js/2.f48c97e1.chunk.js.map": "/keymtg/static/js/2.f48c97e1.chunk.js.map",
-    "index.html": "/keymtg/index.html",
-    "precache-manifest.bde4b371d4bce006fcba41ab075bd7cb.js": "/keymtg/precache-manifest.bde4b371d4bce006fcba41ab075bd7cb.js",
-    "service-worker.js": "/keymtg/service-worker.js",
-    "static/css/main.546f271c.chunk.css.map": "/keymtg/static/css/main.546f271c.chunk.css.map",
-    "static/js/2.f48c97e1.chunk.js.LICENSE.txt": "/keymtg/static/js/2.f48c97e1.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.546f271c.chunk.css",
+    "main.js": "/static/js/main.0c0fbf21.chunk.js",
+    "main.js.map": "/static/js/main.0c0fbf21.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6139a65b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6139a65b.js.map",
+    "static/js/2.f48c97e1.chunk.js": "/static/js/2.f48c97e1.chunk.js",
+    "static/js/2.f48c97e1.chunk.js.map": "/static/js/2.f48c97e1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.dcd69aa02d06840aeb005708f1a78805.js": "/precache-manifest.dcd69aa02d06840aeb005708f1a78805.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.546f271c.chunk.css.map": "/static/css/main.546f271c.chunk.css.map",
+    "static/js/2.f48c97e1.chunk.js.LICENSE.txt": "/static/js/2.f48c97e1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c615591f.js",
+    "static/js/runtime-main.6139a65b.js",
     "static/js/2.f48c97e1.chunk.js",
     "static/css/main.546f271c.chunk.css",
-    "static/js/main.33490c4c.chunk.js"
+    "static/js/main.0c0fbf21.chunk.js"
   ]
 }
