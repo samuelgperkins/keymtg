@@ -1,0 +1,42 @@
+SCRYFALL COUNTS
+21686 cards
+commons 8119
+uncommons 7310
+rares 6636
+mythics 1382
+
+jank_sorted-NOREMOVALS-BASE (add 71 cards from all the ban lists)
+21543 cards
+commons 8068
+uncommons 6628
+rares 5849 
+mythics 998
+
+jank-sorted-2
+18035
+commons 7470
+uncommons 5952
+rares 4174
+mythics 439
+
+higher cost spread to account for majority of mythics
+
+3.00 mythics 515    51%
+2.00 rares  4294    73%
+1.00 uncommons 6059  91.4%
+0.50 commons 7744  96%
+
+lower cost spread
+17349 total cards
+1.50 mythics    348  34.86%
+1.00 rares      3730 63.77%
+0.50 uncommons  5801 87.52%
+0.25 commons    7470 92.58%
+
+1.5 rare spread
+
+      total 	17914 83.15%
+2.25  mythics 	439   43.98%
+1.50  rares	 	4053  69.29%
+0.75  uncommons	5952  89.80%
+0.25  commons	7470  92.58%

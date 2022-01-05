@@ -77,19 +77,30 @@ def main():
                 continue
 
         #price caps by rarity
+        # match rarity:
+        #     case 'rare':
+        #         if float(prices) > 1.75:
+        #             continue
+        #     case 'uncommon':
+        #         if float(prices) > 0.75:
+        #             continue
+        #     case 'common':
+        #         if float(prices) > 0.25:
+        #             continue
+        #     case _:
+        #         if float(prices) > 2.25:
+        #             continue
+
+        #price caps by rarity
         match rarity:
             case 'rare':
-                if float(prices) > 1.75:
-                    continue
+                rarity = 2
             case 'uncommon':
-                if float(prices) > 0.75:
-                    continue
+                rarity = 1
             case 'common':
-                if float(prices) > 0.25:
-                    continue
+                rarity = 0
             case _:
-                if float(prices) > 2.25:
-                    continue
+                rarity = 3
 
 
         # no normal basics
@@ -123,9 +134,10 @@ def main():
         #     prices
         # ))
 
-        fo.write('["{}","{}"],\n'.format(
+        fo.write('["{}","{}","{}"],\n'.format(
             name,
-            rarity
+            rarity,
+            prices
         ))
 
         #fo.write('[\"name\":"{}",\"rarity\":"{}",\"prices\":"{}"],\n'.format(
